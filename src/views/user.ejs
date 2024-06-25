@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skola</title>
+  <title><%= user.name %></title>
 </head>
 <body>
-  <h1>Welcome to Skola.app!</h1>
-  <a href="/user">All user</a>
+  <h1>User Details</h1>
+  <p>ID: <%= user.id %></p>
+  <p>Name: <%= user.name %></p>
+  <a href="/">Back to Home</a>
 </body>
 </html>

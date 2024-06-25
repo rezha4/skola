@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Users</title>
+</head>
+<body>
+  <h1>All Users:</h1>
+  <ul>
+    <% users.forEach(user => { %>
+      <li>
+        <a href="/user/<%= user.id %>"><%= user.name %></a>
+      </li>
+    <% }); %>
+  </ul>
+  <a href="/">Back to Home</a>
+  <h2>Create new</h2>
+  <form action="/user" method="post">
+    <input type="text" name="name" placeholder="name">
+    <input type="password" name="password" placeholder="password">
+    <button type="submit">Create!</button>
+  </form>
+</body>
+</html>
